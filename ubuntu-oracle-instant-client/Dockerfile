@@ -16,6 +16,6 @@ RUN export ORACLE_HOME=/usr/lib/oracle/19.3/client64
 RUN export PATH=$PATH:$ORACLE_HOME/bin
 RUN ln -s /usr/include/oracle/19.3/client64 $ORACLE_HOME/include
 RUN touch /etc/ld.so.conf.d/oracle.conf && chmod o+r /etc/ld.so.conf.d/oracle.conf
-RUN echo '/usr/lib/oracle/12.2/client64/lib/' > /etc/ld.so.conf.d/oracle.conf
+RUN echo '/usr/lib/oracle/19.3/client64/lib/' > /etc/ld.so.conf.d/oracle.conf
 RUN ldconfig
 RUN rm -f /tmp/*.rpm
